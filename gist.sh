@@ -28,6 +28,8 @@ if [ "$1" == "token" ]; then
 elif [ "$1" == "list" ]; then
     shift
 
+    OPEN_IN=false
+
     if has_parameter "-b" $@; then
         OPEN_IN="browser"
         shift
@@ -58,14 +60,14 @@ elif [ "$1" == "list" ]; then
             GIST_COLOR=$YELLOW
         fi
 
-        if [ $OPEN_IN != false ]; then
+        if $OPEN_IN; then
             printf "%d. ${GIST_COLOR}${GIST_ID}${NORMAL}: ${GIST_DESC}\n" $(($i+1))
         else
             printf "${GIST_COLOR}${GIST_ID}${NORMAL}: ${GIST_DESC}\n"
         fi
     done
 
-    if [ $OPEN_IN != false ]; then
+    if $OPEN_IN; then
         printf "\n"
         read -p "Number to open (1..${GIST_COUNT}): " GIST_NO
 
