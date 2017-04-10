@@ -37,6 +37,7 @@ help() {
     printf "    help: gist [command]\n"
     printf "\n"
     printf "    COMMANDS:\n"
+    printf "        ${BLUE}update${NORMAL}${SPACE:6}Update gist CLI.\n"
     printf "        ${BLUE}token${NORMAL}${SPACE:5}Set Github API token.\n"
     printf "        ${BLUE}search${NORMAL}${SPACE:6}Search your Github gists.${NORMAL}\n"
     printf "        ${BLUE}list${NORMAL}${SPACE:4}List your gists.${NORMAL}\n"

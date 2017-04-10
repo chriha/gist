@@ -158,4 +158,10 @@ elif [ "$1" == "search" ]; then
 
     exit
 
+
+# # # # # # # # # # # # # # # # # # # #
+# project self-update
+elif [ "$1" == "update" ]; then
+    . $GIST_DIR/update.sh
+    exit
 fi
