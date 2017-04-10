@@ -10,12 +10,12 @@ get_bash_rc() {
 
     # # # # # # # # # # # # # # # # # # # #
     # mac OSX and .bash_profile
-    elif [ $PC_SYSTEM = 'Darwin' ] && [ -f "$HOME/.bash_profile" ]; then
+    elif [ $GIST_SYSTEM = 'Darwin' ] && [ -f "$HOME/.bash_profile" ]; then
         echo "$HOME/.bash_profile"
 
     # # # # # # # # # # # # # # # # # # # #
     # mac OSX and .profile
-    elif [ $PC_SYSTEM = 'Darwin' ] && [ -f "$HOME/.profile" ]; then
+    elif [ $GIST_SYSTEM = 'Darwin' ] && [ -f "$HOME/.profile" ]; then
         echo "$HOME/.profile"
 
     # # # # # # # # # # # # # # # # # # # #
@@ -32,7 +32,7 @@ help() {
     # spaces until the commands descriptions starts
     SPACE="                      "
 
-    printf "    ${BLUE}gist ${BOLD}v${PC_VERSION}-beta${NORMAL}\n"
+    printf "    ${BLUE}gist ${BOLD}v${GIST_VERSION}-beta${NORMAL}\n"
     printf "\n"
     printf "    help: gist [command]\n"
     printf "\n"
