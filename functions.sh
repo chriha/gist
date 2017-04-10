@@ -140,7 +140,11 @@ fetch_list() {
 }
 
 fetch_gists() {
-    local CACHING_TIME=$(filemtime $GIST_CACHE_ALL)
+    if [ -f $GIST_CACHE_ALL ]; then
+        local CACHING_TIME=$(filemtime $GIST_CACHE_ALL)
+    else
+        local CACHING_TIME=0
+    fi
 
     if [ $CACHING_TIME != 0 ] && [ $CACHING_TIME -gt 1800 ]; then
         cat $GIST_CACHE_ALL
