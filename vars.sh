@@ -15,7 +15,7 @@ GIST_CONFIG=$GIST_DIR/config.json
 GIST_CACHE_DIR=$GIST_DIR/cache
 GIST_CACHE_ALL=$GIST_CACHE_DIR/all.json
 
-. functions.sh
+. $GIST_DIR/functions.sh
 
 # current pro-cli version
 GIST_VERSION=$(cd $GIST_DIR && git describe --tags)

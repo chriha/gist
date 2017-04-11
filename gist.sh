@@ -2,7 +2,7 @@
 
 GIST_DIR="$HOME/.gist"
 
-. vars.sh
+. $GIST_DIR/vars.sh
 
 has_requirements
 
